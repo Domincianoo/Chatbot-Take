@@ -26,11 +26,12 @@ namespace api.Controllers
         public async Task<string> Get()
         {
             List<TakeblipRepository> takeblipRepositories = new List<TakeblipRepository>();
-
+            string tokenGithub = "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";
+            
             //Utilizando o nuget Octokit, simplificaremos o acesso à API do Github, não sendo necessário: informar a URL da API, o método(Get, Post, Patch, etc...), alterar o cabeçalho do protocolo HTTP(para informar o modo de autenticação,por exemplo), criar as classes para receber o Json retornado da API.
             var github = new GitHubClient(new ProductHeaderValue("ChatbotAPI"));
 
-            github.Credentials = new Credentials("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");
+            github.Credentials = new Credentials(tokenGithub);
 
             var allRepositories = await github.Repository.GetAllForUser("takenet");
 
