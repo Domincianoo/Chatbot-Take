@@ -26,7 +26,7 @@ namespace api.Controllers
         public async Task<string> Get()
         {
             List<TakeblipRepository> takeblipRepositories = new List<TakeblipRepository>();
-            string tokenGithub = "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";
+            string tokenGithub = "Informe seu token aqui"; //Para a API funcionar, será necessário informar o Personal Access Token do Github
             
             //Utilizando o nuget Octokit, simplificaremos o acesso à API do Github, não sendo necessário: informar a URL da API, o método(Get, Post, Patch, etc...), alterar o cabeçalho do protocolo HTTP(para informar o modo de autenticação,por exemplo), criar as classes para receber o Json retornado da API.
             var github = new GitHubClient(new ProductHeaderValue("ChatbotAPI"));
