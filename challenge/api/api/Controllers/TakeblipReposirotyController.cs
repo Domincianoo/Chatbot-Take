@@ -30,7 +30,7 @@ namespace api.Controllers
             //Utilizando o nuget Octokit, simplificaremos o acesso à API do Github, não sendo necessário: informar a URL da API, o método(Get, Post, Patch, etc...), alterar o cabeçalho do protocolo HTTP(para informar o modo de autenticação,por exemplo), criar as classes para receber o Json retornado da API.
             var github = new GitHubClient(new ProductHeaderValue("ChatbotAPI"));
 
-            github.Credentials = new Credentials("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");
+            github.Credentials = new Credentials("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");
 
             var allRepositories = await github.Repository.GetAllForUser("takenet");
 
